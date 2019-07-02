@@ -17,6 +17,7 @@ export const getType = (v: unknown): string => {
   return type;
 };
 
+// to be used internally
 export const shallowEqualObjects = (
   a: Record<string, any>,
   b: Record<string, any>
@@ -38,6 +39,7 @@ export const shallowEqualObjects = (
   return true;
 };
 
+// to be used internally
 export const shallowEqualArrays = (a: any[], b: any[]): boolean => {
   if (a.length !== b.length) {
     return false;
@@ -50,4 +52,22 @@ export const shallowEqualArrays = (a: any[], b: any[]): boolean => {
   }
 
   return true;
+};
+
+export const shallowEqual = (a: any, b: any): boolean => {
+  if (a === b) {
+    return true;
+  }
+
+  const type = getType(a);
+  if (type === 'json') {
+    // shallow compare plain objects
+    return getType(b) === type && shallowEqualObjects(a, b);
+  }
+
+  if (type === 'array') {
+    return getType(b) === type && shallowEqualArrays(a, b);
+  }
+
+  return false;
 };

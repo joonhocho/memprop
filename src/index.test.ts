@@ -7,12 +7,10 @@ test('memprop with fn', () => {
   const fn2 = (): any => 1;
   const fn3 = (): any => 2;
 
-  // no args | empy args => always return the first one
+  // no args => always return the first one
   expect(mem(fn1)).toBe(fn1);
   expect(mem(() => null)).toBe(fn1);
   expect(mem(() => 1)).toBe(fn1);
-  expect(mem(() => 1, [])).toBe(fn1);
-  expect(mem(() => 1, [])).toBe(fn1);
 
   // new args, new prop
   expect(mem(fn2, [1])).toBe(fn2);
@@ -42,10 +40,9 @@ test('memprop with object', () => {
   const o3 = { c: undefined };
   const o4 = { d: undefined };
 
-  // no args | empy args => always return the first one
+  // no args => always return the first one
   expect(mem(o1)).toBe(o1);
   expect(mem({})).toBe(o1);
-  expect(mem({}, [])).toBe(o1);
 
   // new args, new prop
   expect(mem(o2, [1])).toBe(o2);
@@ -82,10 +79,9 @@ test('memprop with array', () => {
   const o2 = [2];
   const o3 = [3];
 
-  // no args | empy args => always return the first one
+  // no args => always return the first one
   expect(mem(o1)).toBe(o1);
   expect(mem({})).toBe(o1);
-  expect(mem({}, [])).toBe(o1);
 
   // new args, new prop
   expect(mem(o2, [1])).toBe(o2);
