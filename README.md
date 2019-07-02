@@ -23,9 +23,9 @@ Since everyone starts passing render functions as a `prop` to child component, `
 
 ## How it works
 
-`memprop()` creates a new memoize function of type `<T>(propToReuse: T, valuesToWatch?: any[]) => T`.
+`memprop()` creates a new memoize function of type `<T>(propToReuse: T, valuesToWatch?: any) => T`.
 
-if `valuesToWatch` is undefined | null | empty array,
+if `valuesToWatch` is not provided,
 previously stored `propToReuse` will be reused.
 
 if `valuesToWatch` is shallow equal to previous `valuesToWatch`,
@@ -60,7 +60,7 @@ class extends PureComponent {
             // render
           },
           // new function prop will be passed only if any of theses values change
-          [watch, these, values]
+          [watch, these, values] // or {watch, these, values} is also supported
         )}
       </Select>
     );
