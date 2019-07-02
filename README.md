@@ -2,9 +2,9 @@
 React optimization tool for memoizing (function / object) property to avoid unnecessary re-renders
 
 [![npm version](https://badge.fury.io/js/memprop.svg)](https://badge.fury.io/js/memprop)
-[![npm](https://img.shields.io/npm/dw/memprop.svg)](https://www.npmjs.com/package/memprop)
 ![npm type definitions](https://img.shields.io/npm/types/memprop.svg)
 [![Build Status](https://travis-ci.org/joonhocho/memprop.svg?branch=master)](https://travis-ci.org/joonhocho/memprop)
+[![Coverage Status](https://coveralls.io/repos/github/joonhocho/memprop/badge.svg?branch=master)](https://coveralls.io/github/joonhocho/memprop?branch=master)
 [![Dependency Status](https://david-dm.org/joonhocho/memprop.svg)](https://david-dm.org/joonhocho/memprop)
 [![GitHub](https://img.shields.io/github/license/joonhocho/memprop.svg)](https://github.com/joonhocho/memprop/blob/master/LICENSE)
 
