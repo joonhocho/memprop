@@ -1,6 +1,6 @@
 {
   "name": "memprop",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React optimization tool for memoizing (function / object) property to avoid unnecessary re-renders",
   "keywords": [
     "react",
