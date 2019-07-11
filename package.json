@@ -1,6 +1,6 @@
 {
   "name": "memprop",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React optimization tool for memoizing (function / object) property to avoid unnecessary re-renders",
   "keywords": [
     "react",
@@ -57,5 +57,11 @@
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "tslib": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
