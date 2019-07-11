@@ -1,6 +1,6 @@
 {
   "name": "memprop",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React optimization tool for memoizing (function / object) property to avoid unnecessary re-renders",
   "keywords": [
     "react",
@@ -9,10 +9,21 @@
     "props",
     "typescript"
   ],
+  "author": "Joon Ho Cho",
+  "license": "MIT",
+  "homepage": "https://github.com/joonhocho/memprop#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joonhocho/memprop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joonhocho/memprop/issues"
+  },
   "module": "lib/index.js",
   "main": "dist/node/index.js",
   "browser": "dist/browser/index.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "all": "npm run clean && npm run format && npm run lint:fix && npm run build:all && npm run test",
     "build:all": "npm run build:module && npm run build:node && npm run build:browser",
@@ -33,16 +44,9 @@
     "test:watch": "jest --watch"
   },
   "pre-commit": "precommit",
-  "author": "Joon Ho Cho",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joonhocho/memprop.git"
+  "peerDependencies": {
+    "tslib": "^1.10.0"
   },
-  "bugs": {
-    "url": "https://github.com/joonhocho/memprop/issues"
-  },
-  "homepage": "https://github.com/joonhocho/memprop#readme",
   "devDependencies": {
     "@types/jest": "^24.0.15",
     "@types/node": "^12.6.2",
@@ -52,17 +56,13 @@
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
     "tscpaths": "^0.0.9",
-    "tsdef": "^0.0.9",
+    "tsdef": "^0.0.13",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.3"
   },
-  "peerDependencies": {
-    "tslib": "^1.10.0"
-  },
   "engines": {
     "node": ">=8.0.0"
-  },
-  "sideEffects": false
+  }
 }
